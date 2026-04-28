@@ -25,7 +25,7 @@ class PostViewModel(private val repository: PostRepository = PostRepository()) :
         }
     }
 
-    fun updateItem(index: Int) {
+    fun updateLike(index: Int) {
         _state.update { list ->
             list.mapIndexed { i, item ->
                 if (i == index) {

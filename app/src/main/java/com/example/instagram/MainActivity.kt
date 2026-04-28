@@ -248,7 +248,7 @@ fun FeedItem(value: Post, index: Int, viewModel: PostViewModel) {
                 contentDescription = value.caption,
                 modifier = Modifier.padding(top = 7.dp)
                     .fillMaxWidth()
-                    .height(400.dp)
+                    .height(412.dp)
             )
 
             Row(horizontalArrangement = Arrangement.SpaceBetween) {
@@ -256,7 +256,7 @@ fun FeedItem(value: Post, index: Int, viewModel: PostViewModel) {
                     id = if (state.value[index].isLiked) R.drawable.heart_liked else R.drawable.heart
                 )
                 Image(painter = painter, contentDescription = "heart", modifier = Modifier.size(34.dp).padding(top = 9.dp).clickable {
-                    viewModel.updateItem(index)
+                    viewModel.updateLike(index)
                 })
 
 
